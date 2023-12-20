@@ -1,6 +1,6 @@
 # Project Description
 
-I am planning this project to be an online Jackknife resampling tool using an input .csv file; it will be programmed in JavaScript. This project is designed to complement my dad's research paper on neuroscience and using Jackknife resampling to analyse his primary data. The research paper is currently in the process of being edited and will be published soon. Once it is ready, I will begin working on this project to apply the jackknife resampling techniques my dad used for his research.
+I am planning this project to be an online Jackknife resampling tool using an input .csv file; it will be programmed in C. This project is designed to complement my dad's research paper on neuroscience and using Jackknife resampling to analyse his primary data. The research paper is currently in the process of being edited and will be published soon. Once it is ready, I will begin working on this project to apply the jackknife resampling techniques my dad used for his research.
 
 ## Jackknife Resampling
 
