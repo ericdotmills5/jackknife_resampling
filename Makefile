@@ -1,14 +1,14 @@
 run:
-	@gcc -o jk_resample.out jk_resample.c -lgsl -lgslcblas -lm
-	@./jk_resample.out
+	@gcc -o gsl_optimise.out gsl_optimise.c -lgsl -lgslcblas -lm
+	@./gsl_optimise.out
 
 val:
-	@gcc -g -o jk_resample_val.out jk_resample.c
-	@valgrind --leak-check=full ./jk_resample_val.out
+	@gcc -g -o gcl_optimise_val.out gcl_optimise.c
+	@valgrind --leak-check=full ./gcl_optimise_val.out
 
 gdb:
-	@gcc jk_resample.c -o jk_resample_gdb.out -g
-	@gdb jk_resample_gdb.out
+	@gcc gcl_optimise.c -o gcl_optimise_gdb.out -g
+	@gdb gcl_optimise_gdb.out
 
 clean:
 	@rm -f *.out

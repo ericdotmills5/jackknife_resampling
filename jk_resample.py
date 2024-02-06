@@ -4,10 +4,10 @@ import pandas as pd
 
 n = 18 # number of subjects
 T = 72 # number of trials
-d = 1 # how many to delete
+d = 3 # how many to delete
 q = 0.5 # q
 combos = list(combinations(range(0, n), d)) # all combinations of n choose d
-file_name = "hello.csv" 
+file_name = "data_large_18x72.csv" 
 
 
 # data = nxTx2 3d tensor; rows = subjects; columns = trial no.; depth 0 = mu, depth 1 = skill
@@ -61,9 +61,7 @@ print(sum_alpha, sum_beta)
 
 '''
 to do:
-    implement into c++
-        how will you implement the optimise function?
+    implement into c
         how will you import the csv data?
     
-    try program with ed, see if it runs faster
 '''
