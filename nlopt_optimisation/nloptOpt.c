@@ -1,16 +1,15 @@
-#include <nlopt.h>
-#include <stdio.h>
+#include "../jk_resample.h"
 
 typedef struct {
     double a, b;
 } TestParams;
-
+/*
 typedef struct {
     double x, y, minf;
 } OptimisedOutputs;
 
 typedef double (*ObjFunc)(unsigned, const double*, double*, void*);
-
+*/
 double testObj(unsigned n, const double *x, double *grad, void *params) {
     TestParams *p = (TestParams *) params;
     double a = p->a, b = p->b;
