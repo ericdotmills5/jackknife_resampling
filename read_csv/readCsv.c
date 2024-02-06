@@ -1,9 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "../jk_resample.h"
 
 #define MAX_LINE_SIZE 1024 // assume max 1024 characters per line
-#define MAX_COLUMN_SIZE n * T // according to structure
 
 double*** extractData(char *fileName, int n, int T) {
     int maxCols = n * T; // consequence of csv structure
@@ -27,7 +24,7 @@ double*** extractData(char *fileName, int n, int T) {
     char currLine[MAX_LINE_SIZE]; // output buffer temperarily into string
     char *doubleCharPointer;
     fgets(currLine, sizeof(currLine), dataFile); // throw away header
-    for (int i = 1; i < MAX_COLUMN_SIZE + 1; i++) { // start after header, and finish 1 later
+    for (int i = 1; i < maxCols + 1; i++) { // start after header, and finish 1 later
         fgets(currLine, sizeof(currLine), dataFile); // read current line and put into currLine
 
         int subj = (i - 1) % n; // based on structure of csv
@@ -73,11 +70,12 @@ void print3dArray(double*** array, int height, int length, int depth) {
 
 int main() {
     // practice with small data
-    int n = 3;
-    int T = 2;
-    char* fileName = "data_small_3x2.csv";
+    int n = 18;
+    int T = 72;
+    char* fileName = "../place_csv_here/test_data_large_18x72.csv";
 
     double*** tensor = extractData(fileName, n, T);
     print3dArray(tensor, n, T, 2);
     free3dArray(tensor, n, T);
 }
+// be aware of 0 indexing; subject 2 is read as subject 1.

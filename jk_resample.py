@@ -4,10 +4,10 @@ import pandas as pd
 
 n = 18 # number of subjects
 T = 72 # number of trials
-d = 3 # how many to delete
+d = 2 # how many to delete
 q = 0.5 # q
 combos = list(combinations(range(0, n), d)) # all combinations of n choose d
-file_name = "data_large_18x72.csv" 
+file_name = "place_csv_here/test_data_large_18x72.csv" 
 
 
 # data = nxTx2 3d tensor; rows = subjects; columns = trial no.; depth 0 = mu, depth 1 = skill

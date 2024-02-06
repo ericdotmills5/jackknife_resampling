@@ -3,4 +3,4 @@ Given a data set (<3000 entries), the program will fit a quantile regression mod
 
 This project is to be implemented with python using the scipy library, and then C. 
 
-Currently, in python, the running time fluctuates based on the number of elements one wishes to delete, taking 10 seconds for d = 1 and 20 hours for d = n/2.
+Currently, in python, the running time fluctuates based on the number of elements one wishes to delete, taking 10 seconds for d = 1 and 20 minutes for d = n/2.
